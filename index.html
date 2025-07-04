@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input, button {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .row-green {
+            background-color: #d4edda; /* light green */
+        }
+
+        .row-red {
+            background-color: #f8d7da; /* light red */
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <label for="id">ID: </label>
+    <input id="id" name="id" type="number" placeholder="Enter ID" />
+    <button onclick="getUser()" type="submit">Fetch Data</button>
+
+    <p><strong>Dataset:</strong></p>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody id="data-body">
+        </tbody>
+    </table>
+    </center>
+
+    <script src="script.js"></script>
+</body>
+</html>
